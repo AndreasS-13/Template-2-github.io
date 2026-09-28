@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Nome | Cartão Virtual Pro</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Biblioteca para gerar QR Code dinâmico -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body data-theme="dark">
+
+  <!-- Luzes de Fundo (Glow Effect) -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Botão de Tema -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Alternar Tema">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <main class="card-container" id="card">
+    
+    <!-- Header com Avatar e Status -->
+    <header class="profile">
+      <div class="avatar-wrapper">
+        <img src="avatar.jpg" alt="Sua Foto" class="avatar">
+        <span class="status-badge" title="Disponível para projetos"></span>
+      </div>
+      
+      <h1 class="name">Seu Nome</h1>
+      <p class="tagline">Tech Lead & Full Stack Developer</p>
+      
+      <div class="tags">
+        <span class="tag">UI/UX</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+      </div>
+    </header>
+
+    <!-- Estatísticas / Métricas Rápidas -->
+    <section class="stats">
+      <div class="stat-item">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Anos Exp.</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">40+</span>
+        <span class="stat-label">Projetos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Satisfação</span>
+      </div>
+    </section>
+
+    <!-- Links com Efeito Neon & Destaque -->
+    <nav class="links">
+      <a href="https://wa.me/5500000000000" target="_blank" class="link-btn highlight">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Fale Comigo no WhatsApp</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+      </a>
+
+      <a href="https://github.com/seu-usuario" target="_blank" class="link-btn">
+        <i class="fa-brands fa-github"></i>
+        <span>Portfólio no GitHub</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="link-btn">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>Perfil no LinkedIn</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+      </a>
+
+      <a href="mailto:seuemail@exemplo.com" class="link-btn">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Enviar E-mail</span>
+        <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+      </a>
+    </nav>
+
+    <!-- Botão de Ação Secundária (QR Code) -->
+    <div class="actions">
+      <button id="share-btn" class="action-btn">
+        <i class="fa-solid fa-qrcode"></i> Compartilhar Cartão
+      </button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>© 2026 Seu Nome • Desenvolvido com HTML, CSS & JS</p>
+    </footer>
+
+  </main>
+
+  <!-- Modal do QR Code -->
+  <div id="qr-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn">&times;</button>
+      <h3>Escanear Cartão</h3>
+      <p>Aponte a câmera do celular para abrir o link:</p>
+      <div id="qrcode"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
